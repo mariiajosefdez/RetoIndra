@@ -129,6 +129,7 @@ public class Clase {
      * Obtiene la media
      * 
      * @return la media
+	 * @author Maria Jose
      */
 	
 	public double getMedia() {
@@ -140,6 +141,8 @@ public class Clase {
      * Obtiene el array de notas de los estudiantes
      * 
      * @return El array de notas
+	 * @author Maria Jose
+	 * 
      */
 	
 	public double[] getNotas() {
@@ -161,6 +164,7 @@ public class Clase {
      * Obtiene la nota máxima registrada
      * 
      * @return la nota máxima de la clase
+	 * @author Maria Jose
      */
 	
 	public double getMax() {
@@ -171,6 +175,7 @@ public class Clase {
      * obtiene la nota mínima registrada
      * 
      * @return la nota mínima de la clase
+	 * @author Maria Jose
      */
 	
 	public double getMin() {
@@ -182,6 +187,7 @@ public class Clase {
      * obtiene el scanner utilizado para la entrada de datos
      * 
      * @return el scanner estático de la clase
+	 * @author Maria Jose
      */
 	
 	public static Scanner getScanner() {

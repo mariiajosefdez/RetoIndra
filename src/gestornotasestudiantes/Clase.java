@@ -12,19 +12,37 @@ public class Clase {
 	private double media;
 
 	static Scanner scanner = new Scanner(System.in);
-
+	
+	/**
+     * Constructor que solicita al usuario la cantidad de estudiantes 
+     * y crea un array de notas con ese tamaño.
+     */
 	public Clase() {
 		System.out.print("Ingrese la cantidad de estudiantes: ");
 		int cantidad = scanner.nextInt();
 
 		this.notas = new double[cantidad];
+		
+	/**
+	 * Constructor que inicializa el array de notas con un tamaño
+	 * 
+	 * @param tamaño Número de estudiantes en la clase
+	 */	
 
 	}
 
 	public Clase(int tamaño) {
 		this.notas = new double[tamaño];
+		
+		
 	}
 
+	/**
+     * para ingresar las notas de los estudiantes
+     * el usuario ingresa cada nota y las almacena en el array
+     * y calculo la media, la maxima y minima de las notas
+     */
+	
 	public void ingresarNotas() {
 		for (int i = 0; i < this.notas.length; i++) {
 			System.out.print("Ingrese la nota del estudiante " + (i + 1) + ": ");
@@ -36,6 +54,12 @@ public class Clase {
 		notaMinima();
 
 	}
+	/**
+     * calculo la media de las notas ingresadas
+     * recorre todas las notas, sumándolas y dividiendo por el número total
+     * 
+     * @return la media de las notas de los estudiantes
+     */
 
 	private double calcularMedia() {
 		double suma = 0;
@@ -47,7 +71,14 @@ public class Clase {
 
 		return this.media;
 	}
-
+	
+	/**
+     * calculo la nota máxima de las notas ingresadas
+     * Recorre todas las notas para encontrar la más alta
+     * 
+     * @return la nota máxima
+     */
+	
 	private double notaMaxima() {
 		double max = notas[0];
 		for (double nota : notas) {
@@ -61,6 +92,13 @@ public class Clase {
 		return max;
 	}
 
+	/**
+     * calculo la nota mínima de las notas ingresadas
+     * recorre todas las notas para encontrar la más baja
+     * 
+     * @return La nota mínima
+     */
+	
 	private double notaMinima() {
 		double min = notas[0];
 		for (double nota : notas) {
@@ -74,6 +112,11 @@ public class Clase {
 		return min;
 	}
 
+	/**
+     * Muestra los resultados de la media, la minima y la maxima de las notas
+     * 
+     */
+	
 	public void mostrarResultados() {
 		System.out.println("===   Resultados ===");
 		System.out.println("= Nota media: " + media);
@@ -82,10 +125,23 @@ public class Clase {
 		System.out.println("=====================");
 	}
 
+	/**
+     * Obtiene la media
+     * 
+     * @return la media
+     */
+	
 	public double getMedia() {
 		return this.media;
 	}
 
+
+	/**
+     * Obtiene el array de notas de los estudiantes
+     * 
+     * @return El array de notas
+     */
+	
 	public double[] getNotas() {
 		return notas;
 	}
@@ -101,26 +157,60 @@ public class Clase {
 		this.notas = notas;
 	}
 
+	/**
+     * Obtiene la nota máxima registrada
+     * 
+     * @return la nota máxima de la clase
+     */
+	
 	public double getMax() {
 		return max;
 	}
 
+	/**
+     * obtiene la nota mínima registrada
+     * 
+     * @return la nota mínima de la clase
+     */
+	
 	public double getMin() {
 		return min;
 	}
 
+
+	/**
+     * obtiene el scanner utilizado para la entrada de datos
+     * 
+     * @return el scanner estático de la clase
+     */
+	
 	public static Scanner getScanner() {
 		return scanner;
 	}
 
+	/**
+     * Establece un nuevo scanner para la entrada de datos
+     * 
+     * 
+     */
+	
 	public static void setScanner(Scanner scanner) {
 		Clase.scanner = scanner;
 	}
 
+	
+	/**
+     * Establece la media de las notas de la clase
+     * 
+     *
+     */
+	
 	public void setMedia(double media) {
 		this.media = media;
 	}
-
+	
+	
+	
 	@Override
 	public String toString() {
 		return "Clase [notas=" + Arrays.toString(notas) + ", max=" + max + ", min=" + min + ", media=" + media + "]";

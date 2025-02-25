@@ -181,29 +181,6 @@ public class Clase {
 	public double getMin() {
 		return min;
 	}
-
-
-	/**
-     * obtiene el scanner utilizado para la entrada de datos
-     * 
-     * @return el scanner estático de la clase
-	 * @author Maria Jose
-     */
-	
-	public static Scanner getScanner() {
-		return scanner;
-	}
-
-	/**
-     * Establece un nuevo scanner para la entrada de datos
-     * 
-     * 
-     */
-	
-	public static void setScanner(Scanner scanner) {
-		Clase.scanner = scanner;
-	}
-
 	
 	/**
      * Establece la media de las notas de la clase
